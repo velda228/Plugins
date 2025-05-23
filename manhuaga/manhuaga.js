@@ -31,8 +31,8 @@ function clearCache() {
 }
 
 // Основные функции
-async function getPopularManga(page = 1) {
-    log('getPopularManga called');
+function getPopularManga(page = 1) {
+    log('getPopularManga called (SYNC)');
     try {
         // Проверяем кэш
         const now = Date.now();
@@ -40,11 +40,11 @@ async function getPopularManga(page = 1) {
             log('getPopularManga returning from cache: ' + cache.popular.data.length + ' items');
             return cache.popular.data;
         }
-        // Получаем данные
-        const response = await fetchFromSwift(`${BASE_URL}/popular?page=${page}`);
+        // Получаем данные СИНХРОННО
+        const response = fetchFromSwift(`${BASE_URL}/popular?page=${page}`);
         if (!response) {
             log('getPopularManga: fetch failed');
-            throw new Error('Failed to fetch popular manga');
+            return [];
         }
         // Парсим HTML
         const parser = new DOMParser();
