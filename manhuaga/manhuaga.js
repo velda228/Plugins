@@ -198,10 +198,20 @@ async function getChapterPages(chapterId) {
 }
 
 // Экспортируем функции
+if (typeof window === 'undefined') {
+    var window = this;
+}
+
 window.mangaPlugin = {
     getPopularManga,
     searchManga,
     getMangaDetails,
     getChapterPages,
     clearCache
-}; 
+};
+
+log('typeof getPopularManga: ' + typeof getPopularManga);
+log('typeof window.getPopularManga: ' + typeof window.getPopularManga);
+log('typeof window.mangaPlugin: ' + typeof window.mangaPlugin);
+log('typeof window.mangaPlugin.getPopularManga: ' + typeof window.mangaPlugin.getPopularManga);
+log('window keys: ' + Object.keys(window)); 
