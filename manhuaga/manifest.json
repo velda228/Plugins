@@ -11,5 +11,6 @@
   "canBrowse": true,
   "canRead": true,
   "status": "available",
-  "languages": ["EN"]
+  "languages": ["RU"],
+  "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/manhuaga/manhuaga.zip"
 } 
