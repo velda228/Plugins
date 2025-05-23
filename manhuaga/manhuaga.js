@@ -32,22 +32,42 @@ function clearCache() {
 
 // Основные функции
 function getPopularManga(page = 1) {
-    log('getPopularManga called (TEST)');
-    // ТЕСТОВЫЙ ВОЗВРАТ
-    return [
-        {
-            id: 'test1',
-            title: 'Тестовая манга',
-            cover: 'https://placehold.co/200x300?text=Test',
-            url: 'https://manhuaga.com/manga/test1'
-        },
-        {
-            id: 'test2',
-            title: 'Манга 2',
-            cover: 'https://placehold.co/200x300?text=Test2',
-            url: 'https://manhuaga.com/manga/test2'
+    log('getPopularManga called (REAL)');
+    try {
+        const response = fetchFromSwift(`${BASE_URL}/popular?page=${page}`);
+        if (!response) {
+            log('getPopularManga: fetch failed');
+            return [];
         }
-    ];
+        // Парсим HTML
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(response, 'text/html');
+        const mangaList = [];
+        const items = doc.querySelectorAll('div.bsx');
+        log('getPopularManga: найдено блоков: ' + items.length);
+        items.forEach(item => {
+            try {
+                const link = item.querySelector('a');
+                const title = item.querySelector('div.tt a');
+                const cover = item.querySelector('img');
+                if (link && title && cover) {
+                    mangaList.push({
+                        id: link.href.split('/').pop(),
+                        title: title.textContent.trim(),
+                        cover: cover.src,
+                        url: link.href
+                    });
+                }
+            } catch (e) {
+                log('Ошибка парсинга блока: ' + e.message);
+            }
+        });
+        log('getPopularManga: возвращаю манги: ' + mangaList.length);
+        return mangaList;
+    } catch (error) {
+        log('Ошибка в getPopularManga: ' + error.message);
+        return [];
+    }
 }
 
 async function searchManga(query, page = 1) {
