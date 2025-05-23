@@ -1,4 +1,5 @@
 async function getPopularManga() {
+    console.log("getPopularManga: старт");
     try {
         // Загружаем главную страницу сайта
         const response = await fetch("https://manhuaga.com/");
@@ -19,7 +20,7 @@ async function getPopularManga() {
                 cover: match[2].startsWith("http") ? match[2] : "https://manhuaga.com" + match[2]
             });
         }
-
+        console.log("getPopularManga: найдено манги", mangaList.length);
         return mangaList;
     } catch (error) {
         console.error("Error in getPopularManga:", error);
