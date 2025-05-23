@@ -1,29 +1,9 @@
 {
   "id": "manhuaga",
   "name": "Manhuaga",
-  "description": "Плагин для чтения манги с сайта manhuaga.com",
+  "description": "Источник манги manhuaga.com",
   "version": "1.0.0",
-  "author": "MoHua Team",
-  "website": "https://manhuaga.com",
-  "api_version": "1.0",
-  "functions": [
-    "getPopularManga",
-    "searchManga",
-    "getMangaDetails",
-    "getChapterPages",
-    "clearCache"
-  ],
-  "capabilities": [
-    "popular",
-    "search",
-    "manga_details",
-    "chapter_pages"
-  ],
-  "settings": {
-    "cache_duration": 300,
-    "max_search_results": 50,
-    "max_popular_results": 30
-  },
+  "author": "velda228",
   "repository": "https://github.com/velda228/Plugins",
   "icon": "https://raw.githubusercontent.com/velda228/Plugins/main/manhuaga/icon.jpg",
   "isInstalled": false,
@@ -31,6 +11,6 @@
   "canBrowse": true,
   "canRead": true,
   "status": "available",
-  "languages": ["RU"],
+  "languages": ["EN"],
   "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/manhuaga/manhuaga.js"
 } 
