@@ -121,7 +121,7 @@ class ManhuagaPlugin: MangaSourcePlugin {
                 print("[ManhuagaPlugin] Ошибка: не удалось декодировать HTML")
                 return []
             }
-            
+            print("[ManhuagaPlugin] Первые 1000 символов HTML: \(String(html.prefix(1000)))")
             return try parseMangaList(html: html)
         } catch {
             print("[ManhuagaPlugin] Ошибка при загрузке данных: \(error)")
@@ -130,33 +130,21 @@ class ManhuagaPlugin: MangaSourcePlugin {
     }
     
     private func parseMangaList(html: String) throws -> [Manga] {
-        print("[ManhuagaPlugin] Начало парсинга списка манги")
-        
-        // Ищем все карточки манги
-        let regex = try NSRegularExpression(pattern: #"<div class="bsx">.*?<a href="([^"]+)".*?<img src="([^"]+)".*?<div class="tt">([^<]+)</div>"#, options: [.dotMatchesLineSeparators])
+        let regex = try NSRegularExpression(
+            pattern: #"<li[^>]*class=\"series\"[^>]*>.*?<a[^>]*href=\"([^\"]+)\"[^>]*>.*?<img[^>]*src=\"([^\"]+)\"[^>]*>.*?<h2[^>]*>([^<]+)</h2>"#,
+            options: [.dotMatchesLineSeparators, .caseInsensitive]
+        )
         let matches = regex.matches(in: html, options: [], range: NSRange(location: 0, length: html.utf16.count))
-        print("[ManhuagaPlugin] Найдено совпадений: \(matches.count)")
-        
         var mangas: [Manga] = []
-        for (index, match) in matches.enumerated() {
-            guard match.numberOfRanges >= 4 else {
-                print("[ManhuagaPlugin] Пропуск совпадения \(index): недостаточно групп")
-                continue
-            }
-            
+        for match in matches {
+            guard match.numberOfRanges >= 4 else { continue }
             let urlRange = Range(match.range(at: 1), in: html)
             let coverRange = Range(match.range(at: 2), in: html)
             let titleRange = Range(match.range(at: 3), in: html)
-            
             guard let urlStr = urlRange.map({ String(html[$0]) }),
                   let cover = coverRange.map({ String(html[$0]) }),
-                  let title = titleRange.map({ String(html[$0]) }) else {
-                print("[ManhuagaPlugin] Пропуск совпадения \(index): не удалось извлечь данные")
-                continue
-            }
-            
-            let sourceId = urlStr.replacingOccurrences(of: "\(baseURL)/manga/", with: "").trimmingCharacters(in: CharacterSet(charactersIn: "/"))
-            
+                  let title = titleRange.map({ String(html[$0]) }) else { continue }
+            let sourceId = urlStr.replacingOccurrences(of: "/manga/", with: "").trimmingCharacters(in: CharacterSet(charactersIn: "/"))
             let manga = Manga(
                 title: title,
                 coverURL: cover,
@@ -176,10 +164,7 @@ class ManhuagaPlugin: MangaSourcePlugin {
                 uploader: nil
             )
             mangas.append(manga)
-            print("[ManhuagaPlugin] Добавлена манга: \(title)")
         }
-        
-        print("[ManhuagaPlugin] Всего загружено манги: \(mangas.count)")
         return mangas
     }
 
