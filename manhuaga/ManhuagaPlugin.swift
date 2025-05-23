@@ -4,7 +4,7 @@ class ManhuagaPlugin: MangaSourcePlugin {
     let id = "manhuaga"
     let name = "Manhuaga"
     let version = "1.0.0"
-    let author = "Твоё Имя"
+    let author = "velda228"
     let website = "https://manhuaga.com"
     let icon = "https://manhuaga.com/favicon.ico"
 
