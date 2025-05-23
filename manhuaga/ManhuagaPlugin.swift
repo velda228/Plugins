@@ -4,7 +4,7 @@ class ManhuagaPlugin: MangaSourcePlugin {
     let id = "manhuaga"
     let name = "Manhuaga"
     let version = "1.0.0"
-    let author = "Твоё Имя"
+    let author = "velda228"
     let website = "https://manhuaga.com"
     let icon = "https://manhuaga.com/favicon.ico"
 
@@ -49,23 +49,26 @@ class ManhuagaPlugin: MangaSourcePlugin {
         let url = URL(string: "https://manhuaga.com/")!
         let (data, _) = try await URLSession.shared.data(from: url)
         guard let html = String(data: data, encoding: .utf8) else { return [] }
-        // Парсим ссылки на мангу
-        let regex = try! NSRegularExpression(pattern: #"<a href=\"(https://manhuaga.com/manga/[^\"]+)\"[^>]*title=\"([^\"]+)\"[^>]*>"#, options: [])
+        // Парсим карточки манги из блока .bsx
+        let regex = try! NSRegularExpression(pattern: #"<div class=\"bsx\">.*?<a href=\"([^"]+)\"[^>]*title=\"([^"]+)\"[^>]*>.*?<img[^>]+src=\"([^"]+)\"[^>]*alt=\"([^"]*)\"[^>]*>.*?</a>"#, options: [.dotMatchesLineSeparators, .caseInsensitive])
         let matches = regex.matches(in: html, options: [], range: NSRange(location: 0, length: html.utf16.count))
         var mangas: [Manga] = []
         for match in matches {
-            guard match.numberOfRanges >= 3 else { continue }
+            guard match.numberOfRanges >= 5 else { continue }
             let urlRange = Range(match.range(at: 1), in: html)
             let titleRange = Range(match.range(at: 2), in: html)
+            let coverRange = Range(match.range(at: 3), in: html)
+            let altRange = Range(match.range(at: 4), in: html)
             guard let urlStr = urlRange.map({ String(html[$0]) }),
-                  let title = titleRange.map({ String(html[$0]) }) else { continue }
+                  let title = titleRange.map({ String(html[$0]) }),
+                  let cover = coverRange.map({ String(html[$0]) }) else { continue }
             let sourceId = urlStr.replacingOccurrences(of: "https://manhuaga.com/manga/", with: "").trimmingCharacters(in: CharacterSet(charactersIn: "/"))
             let manga = Manga(
                 title: title,
-                coverURL: nil, // Можно доработать парсинг обложки
+                coverURL: cover,
                 author: "",
                 artist: nil,
-                description: "",
+                description: altRange.map { String(html[$0]) } ?? "",
                 status: .unknown,
                 genres: [],
                 chapters: [],
