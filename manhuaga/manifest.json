@@ -1,9 +1,14 @@
 {
   "id": "manhuaga",
   "name": "Manhuaga",
+  "description": "Источник манги manhuaga.com",
   "version": "1.0.0",
   "author": "velda228",
-  "description": "Источник манги manhuaga.com",
-  "website": "https://manhuaga.com",
-  "icon": "https://manhuaga.com/favicon.ico"
+  "repository": "https://github.com/velda228/Plugins",
+  "icon": "https://manhuaga.com/favicon.ico",
+  "isInstalled": false,
+  "canSearch": true,
+  "canBrowse": true,
+  "canRead": true,
+  "status": "available"
 } 
