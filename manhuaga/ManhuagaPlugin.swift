@@ -49,7 +49,10 @@ class ManhuagaPlugin: MangaSourcePlugin {
         print("[ManhuagaPlugin] Начало загрузки популярной манги")
         let url = URL(string: "https://manhuaga.com/")!
         do {
+            print("[ManhuagaPlugin] Отправка запроса к URL: \(url)")
             let (data, response) = try await URLSession.shared.data(from: url)
+            print("[ManhuagaPlugin] Получен ответ от сервера")
+            
             guard let httpResponse = response as? HTTPURLResponse else {
                 print("[ManhuagaPlugin] Ошибка: неверный тип ответа")
                 return []
@@ -61,17 +64,29 @@ class ManhuagaPlugin: MangaSourcePlugin {
                 return []
             }
             
+            print("[ManhuagaPlugin] Размер полученных данных: \(data.count) байт")
             guard let html = String(data: data, encoding: .utf8) else {
                 print("[ManhuagaPlugin] Ошибка: не удалось декодировать HTML")
                 return []
             }
             
             print("[ManhuagaPlugin] HTML получен, длина: \(html.count)")
+            print("[ManhuagaPlugin] Первые 500 символов HTML: \(String(html.prefix(500)))")
             
             // Парсим карточки манги из элементов li
             let regex = try! NSRegularExpression(pattern: #"<li>.*?<a class=\"series\" href=\"([^"]+)\"[^>]*>.*?<img[^>]+src=\"([^"]+)\"[^>]*>.*?<h2>.*?<a[^>]*>([^<]+)</a>.*?<span><b>Genres</b>:\s*([^<]+)</span>"#, options: [.dotMatchesLineSeparators, .caseInsensitive])
+            print("[ManhuagaPlugin] Регулярное выражение скомпилировано")
+            
             let matches = regex.matches(in: html, options: [], range: NSRange(location: 0, length: html.utf16.count))
             print("[ManhuagaPlugin] Найдено совпадений: \(matches.count)")
+            
+            if matches.isEmpty {
+                print("[ManhuagaPlugin] Предупреждение: не найдено ни одного совпадения")
+                // Попробуем найти любые элементы li для проверки структуры HTML
+                let liRegex = try! NSRegularExpression(pattern: "<li>", options: [])
+                let liMatches = liRegex.matches(in: html, options: [], range: NSRange(location: 0, length: html.utf16.count))
+                print("[ManhuagaPlugin] Найдено элементов li: \(liMatches.count)")
+            }
             
             var mangas: [Manga] = []
             for (index, match) in matches.enumerated() {
@@ -92,8 +107,14 @@ class ManhuagaPlugin: MangaSourcePlugin {
                     continue
                 }
                 
+                print("[ManhuagaPlugin] Обработка манги \(index + 1):")
+                print("  URL: \(urlStr)")
+                print("  Обложка: \(cover)")
+                print("  Название: \(title)")
+                
                 let sourceId = urlStr.replacingOccurrences(of: "https://manhuaga.com/manga/", with: "").trimmingCharacters(in: CharacterSet(charactersIn: "/"))
                 let genres = genresRange.map { String(html[$0]) }?.components(separatedBy: ", ").map { $0.trimmingCharacters(in: .whitespacesAndNewlines) } ?? []
+                print("  Жанры: \(genres)")
                 
                 let manga = Manga(
                     title: title,
