@@ -32,32 +32,31 @@ function clearCache() {
 
 // Основные функции
 async function getPopularManga(page = 1) {
+    log('getPopularManga called');
     try {
         // Проверяем кэш
         const now = Date.now();
         if (cache.popular.data && (now - cache.popular.timestamp) < CACHE_DURATION) {
+            log('getPopularManga returning from cache: ' + cache.popular.data.length + ' items');
             return cache.popular.data;
         }
-
         // Получаем данные
         const response = await fetchFromSwift(`${BASE_URL}/popular?page=${page}`);
         if (!response) {
+            log('getPopularManga: fetch failed');
             throw new Error('Failed to fetch popular manga');
         }
-
         // Парсим HTML
         const parser = new DOMParser();
         const doc = parser.parseFromString(response, 'text/html');
-        
         const mangaList = [];
         const items = doc.querySelectorAll('div.bsx');
-        
+        log('getPopularManga: found ' + items.length + ' items in HTML');
         items.forEach(item => {
             try {
                 const link = item.querySelector('a');
                 const title = item.querySelector('div.tt a');
                 const cover = item.querySelector('img');
-                
                 if (link && title && cover) {
                     mangaList.push({
                         id: link.href.split('/').pop(),
@@ -67,19 +66,18 @@ async function getPopularManga(page = 1) {
                     });
                 }
             } catch (e) {
-                log(`Error parsing manga item: ${e.message}`);
+                log('Error parsing manga item: ' + e.message);
             }
         });
-
+        log('getPopularManga returning ' + mangaList.length + ' items');
         // Обновляем кэш
         cache.popular = {
             data: mangaList,
             timestamp: now
         };
-
         return mangaList;
     } catch (error) {
-        log(`Error in getPopularManga: ${error.message}`);
+        log('Error in getPopularManga: ' + error.message);
         return [];
     }
 }
