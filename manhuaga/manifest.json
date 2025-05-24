@@ -12,5 +12,7 @@
   "canRead": true,
   "status": "available",
   "languages": ["EN"],
-  "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/manhuaga/manhuaga.js"
+  "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/manhuaga/manhuaga.js",
+  "popularUrl": "https://manhuaga.com/manga/?order=popular",
+  "latestUrl": "https://manhuaga.com/manga/?order=update"
 } 
