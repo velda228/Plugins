@@ -1,17 +1,14 @@
-// Базовые функции для работы с API
-function getPopularManga() {
-    return fetch("https://manhuaga.com/manga/?order=popular")
-        .then(response => response.text());
+// Базовые функции для работы с контентом
+function getPopularManga(html) {
+    return html;
 }
 
-function getMangaDetails(url) {
-    return fetch(url)
-        .then(response => response.text());
+function getMangaDetails(html) {
+    return html;
 }
 
-function getChapterPages(url) {
-    return fetch(url)
-        .then(response => response.text());
+function getChapterPages(html) {
+    return html;
 }
 
 // Экспортируем функции
