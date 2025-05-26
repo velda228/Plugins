@@ -1,6 +1,6 @@
 {
   "id": "rizzfables",
-  "name": "RizzFables",
+  "name": "Rizzfables",
   "description": "Источник манги rizzfables.com",
   "version": "1.0.0",
   "author": "velda228",
@@ -13,6 +13,6 @@
   "status": "available",
   "languages": ["EN"],
   "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/rizzfables/rizzfables.js",
-  "popularUrl": "https://rizzfables.com/series/?order=popular",
-  "latestUrl": "https://rizzfables.com/series/?order=update"
+  "popularUrl": "https://rizzfables.com/series/",
+  "latestUrl": "https://rizzfables.com/"
 } 
