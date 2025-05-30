@@ -1,0 +1,14 @@
+{
+    "id": "drakescans",
+    "name": "Drake Scans",
+    "version": "1.0",
+    "language": "en",
+    "baseURL": "https://drakecomic.org",
+    "repository": "https://drakecomic.org",
+    "icon": null,
+    "languages": ["en"],
+    "popularUrl": "https://drakecomic.org",
+    "latestUrl": "https://drakecomic.org",
+    "searchUrl": "https://drakecomic.org/?s={query}",
+    "type": "site"
+} 
