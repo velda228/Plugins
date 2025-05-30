@@ -1,6 +1,5 @@
 {
-    "id": "drakescans",
-    "name": "Drake Scans",
+    "id": "drakecomic",
     "version": "1.0",
     "language": "en",
     "baseURL": "https://drakecomic.org",
@@ -12,3 +11,24 @@
     "searchUrl": "https://drakecomic.org/?s={query}",
     "type": "site"
 } 
+
+
+{
+    "id": "drakecomic",
+    "name": "Drake scans",
+    "description": "Источник манги drakecomic.org",
+    "version": "1.0.0",
+    "author": "velda228",
+    "repository": "https://github.com/velda228/Plugins",
+    "icon": "https://raw.githubusercontent.com/velda228/Plugins/main/drakescans/icon.jpg",
+    "isInstalled": false,
+    "canSearch": true,
+    "canBrowse": true,
+    "canRead": true,
+    "status": "available",
+    "languages": ["EN"],
+    "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/drakescans/drakescans.js",
+    "baseURL": "https://drakecomic.org",
+    "popularUrl": "https://rizzfables.com/series/",
+    "latestUrl": "https://rizzfables.com/"
+}
