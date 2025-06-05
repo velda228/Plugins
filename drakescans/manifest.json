@@ -7,6 +7,7 @@
     "repository": "https://github.com/velda228/Plugins",
     "icon": "https://raw.githubusercontent.com/velda228/Plugins/main/drakescans/icon.png",
     "isInstalled": false,
+    "isAdult": true,
     "canSearch": true,
     "canBrowse": true,
     "canRead": true,
