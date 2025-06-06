@@ -13,7 +13,6 @@
   "status": "available",
   "languages": ["EN"],
   "baseURL": "https://asuracomic.net",
-  "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/asurascans/asuracomic.js",
   "popularUrl": "https://asuracomic.net/series?page=1&genres=&status=-1&types=-1&order=rating",
   "latestUrl": "https://asuracomic.net/series?page=1&genres=&status=-1&types=-1&order=update"
 } 
