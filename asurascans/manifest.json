@@ -14,6 +14,6 @@
   "languages": ["EN"],
   "baseURL": "https://asuracomic.net",
   "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/asurascans/asuracomic.js",
-  "popularUrl": "https://asuracomic.net/series?order=popular",
+  "popularUrl": "https://asuracomic.net/series?order=rating",
   "latestUrl": "https://asuracomic.net/series?order=update"
 } 
