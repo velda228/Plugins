@@ -13,8 +13,8 @@
   "status": "available",
   "languages": ["EN"],
   "baseURL": "https://asuracomic.net",
-  "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/refs/heads/main/asurascans/asuracomic.js",
+  "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/heads/main/asurascans/asuracomic.js",
   "popularUrl": "https://asuracomic.net/series?order=rating",
   "latestUrl": "https://asuracomic.net/series?order=update",
-  "filters": "https://raw.githubusercontent.com/velda228/Plugins/refs/heads/main/asurascans/filters.json"
+  "filters": "https://raw.githubusercontent.com/velda228/Plugins/heads/main/asurascans/filters.json"
 } 
