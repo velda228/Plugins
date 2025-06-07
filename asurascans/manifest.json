@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": "velda228",
   "repository": "https://github.com/velda228/Plugins",
-  "icon": "https://raw.githubusercontent.com/velda228/Plugins/main/asurascans/icon.WEBP",
+  "icon": "https://raw.githubusercontent.com/velda228/Plugins/main/asurascans/icon.jpg",
   "isInstalled": false,
   "canSearch": true,
   "canBrowse": true,
@@ -13,7 +13,8 @@
   "status": "available",
   "languages": ["EN"],
   "baseURL": "https://asuracomic.net",
-  "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/asurascans/asuracomic.js",
+  "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/asuracomic.js",
   "popularUrl": "https://asuracomic.net/series?order=rating",
-  "latestUrl": "https://asuracomic.net/series?order=update"
+  "latestUrl": "https://asuracomic.net/series?order=update",
+  "filters": "https://raw.githubusercontent.com/velda228/Plugins/refs/heads/main/asurascans/filters.json"
 } 
