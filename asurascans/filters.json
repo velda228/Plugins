@@ -122,19 +122,141 @@
         }
       },
       {
+        {
+  "asurascans": {
+    "filters": [
+      {
+        "id": "genre",
+        "type": "multi_select",
+        "label": "Жанры",
+        "options": [
+          "Any", "Action", "Adaptation", "Adult", "Adventure", "Another chance", "Apocalypse", "Comedy", "Coming Soon", "Crazy MC", "Cultivation", "Cute", "Demon", "Drama", "Dungeons", "Ecchi", "Fantasy", "Fight", "Game", "Genius", "Genius MC", "Harem", "Hero", "Historical", "Isekai", "Josei", "Kool Kids", "Magic", "Martial Arts", "Mature", "Mecha", "Modern Setting", "Monsters", "Murim", "Mystery", "Necromancer", "Noble", "Overpowered", "Pets", "Post-Apocalyptic", "Psychological", "Rebirth", "Regression", "Reincarnation", "Return", "Returned", "Returner", "Revenge", "Romance", "School", "School Life", "Sci-fi", "Seinen", "Shoujo", "Shounen", "Slice of Life", "Sports", "Super Hero", "Superhero", "Supernatural", "Survival", "Suspense", "System", "Thriller", "Time Travel", "Time Travel (Future)", "Tower", "Tragedy", "Transmigrating", "Video Game", "Video Games", "Villain", "Violence", "Virtual Game", "Virtual Reality", "Virtual World", "Webtoon", "Wuxia"
+        ],
+        "idMap": {
+          "Any": 0,
+          "Action": 1,
+          "Adaptation": 2,
+          "Adult": 3,
+          "Adventure": 4,
+          "Another chance": 5,
+          "Apocalypse": 6,
+          "Comedy": 7,
+          "Coming Soon": 8,
+          "Crazy MC": 9,
+          "Cultivation": 10,
+          "Cute": 11,
+          "Demon": 12,
+          "Drama": 13,
+          "Dungeons": 14,
+          "Ecchi": 15,
+          "Fantasy": 16,
+          "Fight": 17,
+          "Game": 18,
+          "Genius": 19,
+          "Genius MC": 20,
+          "Harem": 21,
+          "Hero": 22,
+          "Historical": 23,
+          "Isekai": 24,
+          "Josei": 25,
+          "Kool Kids": 26,
+          "Magic": 28,
+          "Martial Arts": 29,
+          "Mature": 30,
+          "Mecha": 31,
+          "Modern Setting": 32,
+          "Monsters": 33,
+          "Murim": 34,
+          "Mystery": 35,
+          "Necromancer": 36,
+          "Noble": 37,
+          "Overpowered": 38,
+          "Pets": 39,
+          "Post-Apocalyptic": 40,
+          "Psychological": 41,
+          "Rebirth": 42,
+          "Regression": 43,
+          "Reincarnation": 44,
+          "Return": 45,
+          "Returned": 46,
+          "Returner": 47,
+          "Revenge": 48,
+          "Romance": 49,
+          "School": 50,
+          "School Life": 51,
+          "Sci-fi": 52,
+          "Seinen": 53,
+          "Shoujo": 54,
+          "Shounen": 55,
+          "Slice of Life": 56,
+          "Sports": 57,
+          "Super Hero": 58,
+          "Superhero": 59,
+          "Supernatural": 60,
+          "Survival": 61,
+          "Suspense": 62,
+          "System": 63,
+          "Thriller": 64,
+          "Time Travel": 65,
+          "Time Travel (Future)": 66,
+          "Tower": 67,
+          "Tragedy": 68,
+          "Transmigrating": 69,
+          "Video Game": 70,
+          "Video Games": 71,
+          "Villain": 72,
+          "Violence": 73,
+          "Virtual Game": 74,
+          "Virtual Reality": 75,
+          "Virtual World": 76,
+          "Webtoon": 77,
+          "Wuxia": 78
+        }
+      },
+      {
+        "id": "status",
+        "type": "select",
+        "label": "Статус",
+        "options": [
+          "Any", "Ongoing", "Hiatus", "Completed", "Dropped", "Season End", "Coming Soon"
+        ],
+        "idMap": {
+          "Any": 0,
+          "Ongoing": 1,
+          "Hiatus": 2,
+          "Completed": 3,
+          "Dropped": 4,
+          "Season End": 5,
+          "Coming Soon": 6
+        }
+      },
+      {
+        "id": "type",
+        "type": "select",
+        "label": "Тип",
+        "options": [
+          "Any", "Manhwa", "Manhua", "Manga", "Mangatoon"
+        ],
+        "idMap": {
+          "Any": 0,
+          "Manhwa": 1,
+          "Manhua": 2,
+          "Manga": 3,
+          "Mangatoon": 4
+        }
+      },
+      {
         "id": "order",
         "type": "select",
         "label": "Сортировка",
         "options": [
-          "Last Updated", "Rating", "Bookmark Count", "Name (Z-A)", "Name (A-Z)"
+          { "name": "Last Updated", "value": "update" },
+          { "name": "Rating", "value": "rating" },
+          { "name": "Bookmark Count", "value": "bookmarks" }
+          { "name": "Name (A-Z)", "value": "asc" },
+          { "name": "Name (Z-A)", "value": "desc" }
         ],
-        "idMap": {
-          "Last Updated": "update",
-          "Rating": "rating",
-          "Bookmark Count": "bookmarks",
-          "Name (Z-A)": "desc",
-          "Name (A-Z)": "asc"
-        }
+        "default": "update"
       }
     ]
   }
