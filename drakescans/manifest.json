@@ -2,7 +2,7 @@
     "id": "drakecomic",
     "name": "Drake scans",
     "description": "Источник манги drakecomic.org",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "velda228",
     "repository": "https://github.com/velda228/Plugins",
     "icon": "https://raw.githubusercontent.com/velda228/Plugins/main/drakescans/icon.png",
