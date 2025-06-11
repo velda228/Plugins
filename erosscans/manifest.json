@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": "velda228",
   "repository": "https://github.com/velda228/Plugins",
-  "icon": "https://raw.githubusercontent.com/velda228/Plugins/main/Erosscans/icon.WEBP",
+  "icon": "https://raw.githubusercontent.com/velda228/Plugins/main/erosscans/icon.WEBP",
   "isInstalled": false,
   "canSearch": true,
   "canBrowse": true,
