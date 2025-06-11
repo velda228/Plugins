@@ -16,5 +16,5 @@
   "baseURL": "https://erosvoid.xyz",
   "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/erosscans/erosscans.js",
   "popularUrl": "https://erosvoid.xyz/manga/?order=popular",
-  "latestUrl": "https://erosvoid.xyz/manga/?status=&type=&order=update"
+  "latestUrl": "https://erosvoid.xyz"
 } 
