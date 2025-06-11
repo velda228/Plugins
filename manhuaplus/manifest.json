@@ -14,6 +14,6 @@
   "languages": ["EN"],
   "baseURL": "https://manhuaplus.com",
   "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/manhuaplus/manhuaplus.js",
-  "popularUrl": "https://manhuaplus.com/?s&post_type=wp-manga&m_orderby=views",
-  "latestUrl": "https://manhuaplus.com/?s&post_type=wp-manga&m_orderby=latest"
+  "popularUrl": "https://manhuaplus.com/manga/?m_orderby=views",
+  "latestUrl": "https://manhuaplus.com/manga/?m_orderby=latest"
 } 
