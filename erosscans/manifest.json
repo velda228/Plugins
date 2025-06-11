@@ -12,8 +12,8 @@
   "canRead": true,
   "status": "available",
   "languages": ["EN"],
-  "baseURL": "https://erostoons.xyz",
+  "baseURL": "https://erosvoid.xyz",
   "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/erosscans/erosscans.js",
-  "popularUrl": "https://erostoons.xyz/manga/?order=popular",
-  "latestUrl": "https://erostoons.xyz/manga/?status=&type=&order=update"
+  "popularUrl": "https://erosvoid.xyz/manga/?order=popular",
+  "latestUrl": "https://erosvoid.xyz/manga/?status=&type=&order=update"
 } 
