@@ -1,0 +1,19 @@
+{
+  "id": "erosscans",
+  "name": "Erosscans",
+  "description": "Источник манги erosscans.com",
+  "version": "1.0.0",
+  "author": "velda228",
+  "repository": "https://github.com/velda228/Plugins",
+  "icon": "https://raw.githubusercontent.com/velda228/Plugins/main/Erosscans/icon.webp",
+  "isInstalled": false,
+  "canSearch": true,
+  "canBrowse": true,
+  "canRead": true,
+  "status": "available",
+  "languages": ["EN"],
+  "baseURL": "https://erosscans.com",
+  "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/Erosscans/erosscans.js",
+  "popularUrl": "https://erosscans.com/series?order=rating",
+  "latestUrl": "https://erosscans.com/series?order=update"
+} 
