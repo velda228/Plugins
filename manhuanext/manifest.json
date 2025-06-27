@@ -1,19 +1,21 @@
 {
     "id": "manhuanext",
-    "name": "Manhua Next",
-    "description": "Источник манги manhuanext.com",
+    "name": "ManhuaNext",
+    "description": "ManhuaNext - популярный источник манги с большим каталогом",
     "version": "1.0.0",
     "author": "velda228",
     "repository": "https://github.com/velda228/Plugins",
-    "icon": "https://manhuanext.com/wp-content/uploads/2025/04/manhua_next-removebg-preview.png",
+    "icon": "https://manhuanext.com/wp-content/uploads/2025/04/cropped-manhua_next-removebg-preview-192x192.png",
     "isInstalled": false,
     "canSearch": true,
     "canBrowse": true,
     "canRead": true,
     "status": "available",
     "languages": ["EN"],
-    "baseURL": "https://manhuanext.com",
+    "baseURL": "https://manhuanext.com/",
+    "websiteURL": "https://manhuanext.com/",
     "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/manhuanext/manhuanext.js",
     "popularUrl": "https://manhuanext.com/manga/?m_orderby=views",
-    "latestUrl": "https://manhuanext.com/latest/"
+    "latestUrl": "https://manhuanext.com/latest/",
+    "searchUrl": "https://manhuanext.com/manga/"
 } 
