@@ -9,6 +9,7 @@ MadaraScans - популярный источник манги с большим
 - **Популярная манга** - отсортированная по популярности
 - **Последние обновления** - новые главы
 - **Поиск манги** - по названию
+- **Фильтры** - по жанрам, статусу, типу и сортировке
 
 ## Особенности
 
@@ -17,6 +18,21 @@ MadaraScans - популярный источник манги с большим
 - ✅ Защита от дубликатов
 - ✅ Отладочные сообщения
 - ✅ Логотип источника
+- ✅ Система фильтров
+
+## Фильтры
+
+### Жанры (множественный выбор)
+Action, Adult, Adventure, Bloody, Comedy, crime, Death Game, Demon, demons, Doujinshi, Drama, Ecchi, Fantasy, Harem, Hentai, Historical, Horror, Josei, Magic, Manga, Manhwa, Martial Arts, Mature, Murim, Mystery, Plot, Psychological, Reincarnation, Romance, School, School Life, Sci-fi, Seinen, Sexual Violence, Shoujo, Shounen, Slice of Life, Supernatural, Survival, System, Webtoon
+
+### Статус
+All, Ongoing, Completed, Hiatus, Dropped, Coming Soon!, Cancelled, Mass Released
+
+### Тип
+All, Manga, Manhwa, Manhua, Comic, Novel, Russian
+
+### Сортировка
+Default, A-Z, Z-A, Update, Added, Popular
 
 ## Структура файлов
 
@@ -24,6 +40,7 @@ MadaraScans - популярный источник манги с большим
 madarascans/
 ├── manifest.json      # Метаданные плагина
 ├── madarascans.js     # Основной код плагина
+├── filters.json       # Конфигурация фильтров
 └── README.md         # Документация
 ```
 
@@ -44,6 +61,7 @@ madarascans/
 
 - [x] Получение списка манги
 - [x] Поиск манги
+- [x] Система фильтров
 - [ ] Детали манги
 - [ ] Чтение глав
 - [ ] Загрузка изображений
