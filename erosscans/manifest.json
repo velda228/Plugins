@@ -7,7 +7,7 @@
   "repository": "https://github.com/velda228/Plugins",
   "icon": "https://raw.githubusercontent.com/velda228/Plugins/main/erosscans/icon.WEBP",
   "isInstalled": false,
-  "isWorking": true,
+  "isWorking": false,
   "canSearch": true,
   "canBrowse": true,
   "canRead": true,
@@ -15,6 +15,7 @@
   "languages": ["EN"],
   "baseURL": "https://erosvoid.xyz",
   "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/erosscans/erosscans.js",
+  "filters": "https://raw.githubusercontent.com/velda228/Plugins/main/erosscans/filters.json",
   "popularUrl": "https://erosvoid.xyz/manga/?order=popular",
   "latestUrl": "https://erosvoid.xyz"
 } 
