@@ -14,6 +14,7 @@
   "languages": ["EN"],
   "baseURL": "https://terco-toon.xyz",
   "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/tercoscans/tercoscans.js",
+  "filters": "https://raw.githubusercontent.com/velda228/Plugins/main/tercoscans/filters.json",
   "popularUrl": "https://terco-toon.xyz/manga/?order=popular",
   "latestUrl": "https://terco-toon.xyz"
 } 
