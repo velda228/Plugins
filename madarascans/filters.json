@@ -1,0 +1,109 @@
+{
+  "madarascans": {
+    "filters": [
+      {
+        "id": "genre",
+        "type": "multi_select",
+        "label": "Жанры",
+        "options": [
+          "Any", "Action", "Adult", "Adventure", "Bloody", "Comedy", "crime", "Death Game", "Demon", "demons", "Doujinshi", "Drama", "Ecchi", "Fantasy", "Harem", "Hentai", "Historical", "Horror", "Josei", "Magic", "Manga", "Manhwa", "Martial Arts", "Mature", "Murim", "Mystery", "Plot", "Psychological", "Reincarnation", "Romance", "School", "School Life", "Sci-fi", "Seinen", "Sexual Violence", "Shoujo", "Shounen", "Slice of Life", "Supernatural", "Survival", "System", "Webtoon"
+        ],
+        "idMap": {
+          "Any": 0,
+          "Action": 1,
+          "Adult": 2,
+          "Adventure": 3,
+          "Bloody": 4,
+          "Comedy": 5,
+          "crime": 6,
+          "Death Game": 7,
+          "Demon": 8,
+          "demons": 9,
+          "Doujinshi": 10,
+          "Drama": 11,
+          "Ecchi": 12,
+          "Fantasy": 13,
+          "Harem": 14,
+          "Hentai": 15,
+          "Historical": 16,
+          "Horror": 17,
+          "Josei": 18,
+          "Magic": 19,
+          "Manga": 20,
+          "Manhwa": 21,
+          "Martial Arts": 22,
+          "Mature": 23,
+          "Murim": 24,
+          "Mystery": 25,
+          "Plot": 26,
+          "Psychological": 27,
+          "Reincarnation": 28,
+          "Romance": 29,
+          "School": 30,
+          "School Life": 31,
+          "Sci-fi": 32,
+          "Seinen": 33,
+          "Sexual Violence": 34,
+          "Shoujo": 35,
+          "Shounen": 36,
+          "Slice of Life": 37,
+          "Supernatural": 38,
+          "Survival": 39,
+          "System": 40,
+          "Webtoon": 41
+        }
+      },
+      {
+        "id": "status",
+        "type": "select",
+        "label": "Статус",
+        "options": [
+          "All", "Ongoing", "Completed", "Hiatus", "Dropped", "Coming Soon!", "Cancelled", "Mass Released"
+        ],
+        "idMap": {
+          "All": 0,
+          "Ongoing": 1,
+          "Completed": 2,
+          "Hiatus": 3,
+          "Dropped": 4,
+          "Coming Soon!": 5,
+          "Cancelled": 6,
+          "Mass Released": 7
+        }
+      },
+      {
+        "id": "type",
+        "type": "select",
+        "label": "Тип",
+        "options": [
+          "All", "Manga", "Manhwa", "Manhua", "Comic", "Novel", "Russian"
+        ],
+        "idMap": {
+          "All": 0,
+          "Manga": 1,
+          "Manhwa": 2,
+          "Manhua": 3,
+          "Comic": 4,
+          "Novel": 5,
+          "Russian": 6
+        }
+      },
+      {
+        "id": "order",
+        "type": "select",
+        "label": "Сортировка",
+        "options": [
+          "Default", "A-Z", "Z-A", "Update", "Added", "Popular"
+        ],
+        "idMap": {
+          "Default": "default",
+          "A-Z": "asc",
+          "Z-A": "desc",
+          "Update": "update",
+          "Added": "added",
+          "Popular": "popular"
+        }
+      }
+    ]
+  }
+} 
