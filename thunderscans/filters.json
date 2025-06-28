@@ -1,0 +1,148 @@
+{
+  "thunderscans": {
+    "filters": [
+      {
+        "id": "genre",
+        "type": "multi_select",
+        "label": "Жанры",
+        "options": [
+          "Any", "Academy", "Action", "Adaptation", "Adventure", "Ancient Style", "Apocalypse", "Artifact", "Based On A Novel", "Blood", "Bloody", "brain hiole", "Cheat system", "Comedy", "Conspiracy", "Cooking", "Cultivation", "demons", "Drama", "Drama Seinen", "Dungeon", "Ecchi", "excitement", "Fantasy", "fantasy، Martial arts", "Fighting", "Fusion", "future era", "Game", "Gender Bender", "Growth", "Harem", "Historical", "Horror", "hunters", "Inspection", "isekai", "Josei", "Joseon Dynasty", "Kingdom Building", "Magic", "Manga", "Manhua", "Manhwa", "Manhwa Hot", "Martial Arts", "Mature", "Medical", "Monster", "Monsters", "Murim", "Mystery", "One shot", "Parenting", "passionate", "Player", "Powered Armor", "Psychological", "Rebirth", "Reborn", "Revenge", "Romance", "School Life", "Sci-fi", "Seinen", "Shoujo", "Shounen", "Slice of Life", "Sports", "Summons", "Supernatural", "superpower", "Survival", "System", "Tamer", "Taming", "Thriller", "Thrilling", "time travel", "Tragedy", "Unknown", "War", "Weak-to-Strong", "Webtoons", "Xianxia", "zombie"
+        ],
+        "idMap": {
+          "Any": 0,
+          "Academy": 1,
+          "Action": 2,
+          "Adaptation": 3,
+          "Adventure": 4,
+          "Ancient Style": 5,
+          "Apocalypse": 6,
+          "Artifact": 7,
+          "Based On A Novel": 8,
+          "Blood": 9,
+          "Bloody": 10,
+          "brain hiole": 11,
+          "Cheat system": 12,
+          "Comedy": 13,
+          "Conspiracy": 14,
+          "Cooking": 15,
+          "Cultivation": 16,
+          "demons": 17,
+          "Drama": 18,
+          "Drama Seinen": 19,
+          "Dungeon": 20,
+          "Ecchi": 21,
+          "excitement": 22,
+          "Fantasy": 23,
+          "fantasy، Martial arts": 24,
+          "Fighting": 25,
+          "Fusion": 26,
+          "future era": 27,
+          "Game": 28,
+          "Gender Bender": 29,
+          "Growth": 30,
+          "Harem": 31,
+          "Historical": 32,
+          "Horror": 33,
+          "hunters": 34,
+          "Inspection": 35,
+          "isekai": 36,
+          "Josei": 37,
+          "Joseon Dynasty": 38,
+          "Kingdom Building": 39,
+          "Magic": 40,
+          "Manga": 41,
+          "Manhua": 42,
+          "Manhwa": 43,
+          "Manhwa Hot": 44,
+          "Martial Arts": 45,
+          "Mature": 46,
+          "Medical": 47,
+          "Monster": 48,
+          "Monsters": 49,
+          "Murim": 50,
+          "Mystery": 51,
+          "One shot": 52,
+          "Parenting": 53,
+          "passionate": 54,
+          "Player": 55,
+          "Powered Armor": 56,
+          "Psychological": 57,
+          "Rebirth": 58,
+          "Reborn": 59,
+          "Revenge": 60,
+          "Romance": 61,
+          "School Life": 62,
+          "Sci-fi": 63,
+          "Seinen": 64,
+          "Shoujo": 65,
+          "Shounen": 66,
+          "Slice of Life": 67,
+          "Sports": 68,
+          "Summons": 69,
+          "Supernatural": 70,
+          "superpower": 71,
+          "Survival": 72,
+          "System": 73,
+          "Tamer": 74,
+          "Taming": 75,
+          "Thriller": 76,
+          "Thrilling": 77,
+          "time travel": 78,
+          "Tragedy": 79,
+          "Unknown": 80,
+          "War": 81,
+          "Weak-to-Strong": 82,
+          "Webtoons": 83,
+          "Xianxia": 84,
+          "zombie": 85
+        }
+      },
+      {
+        "id": "status",
+        "type": "select",
+        "label": "Статус",
+        "options": [
+          "All", "Ongoing", "Completed", "Hiatus"
+        ],
+        "idMap": {
+          "All": 0,
+          "Ongoing": 1,
+          "Completed": 2,
+          "Hiatus": 3
+        }
+      },
+      {
+        "id": "type",
+        "type": "select",
+        "label": "Тип",
+        "options": [
+          "All", "Manga", "Manhwa", "Manhua", "Comic", "Novel"
+        ],
+        "idMap": {
+          "All": 0,
+          "Manga": 1,
+          "Manhwa": 2,
+          "Manhua": 3,
+          "Comic": 4,
+          "Novel": 5
+        }
+      },
+      {
+        "id": "order",
+        "type": "select",
+        "label": "Сортировка",
+        "options": [
+          "Default", "A-Z", "Z-A", "Update", "Added", "Popular"
+        ],
+        "idMap": {
+          "Default": "default",
+          "A-Z": "asc",
+          "Z-A": "desc",
+          "Update": "update",
+          "Added": "added",
+          "Popular": "popular"
+        }
+      }
+    ]
+  }
+} 
