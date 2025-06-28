@@ -1,6 +1,6 @@
 # ThunderScans Plugin
 
-Плагин для источника манги [ThunderScans.com](https://en-thunderscans.com/)
+Плагин для источника манги [ThunderScans.com](https://thunderscans.com/)
 
 ## Описание
 
@@ -9,6 +9,7 @@ ThunderScans - популярный источник манги с больши�
 - **Популярная манга** - отсортированная по популярности
 - **Последние обновления** - новые главы
 - **Поиск манги** - по названию
+- **Фильтры** - по жанрам, статусу, типу и сортировке
 
 ## Особенности
 
@@ -17,6 +18,21 @@ ThunderScans - популярный источник манги с больши�
 - ✅ Защита от дубликатов
 - ✅ Отладочные сообщения
 - ✅ Логотип источника
+- ✅ Система фильтров
+
+## Фильтры
+
+### Жанры (множественный выбор)
+Academy, Action, Adaptation, Adventure, Ancient Style, Apocalypse, Artifact, Based On A Novel, Blood, Bloody, brain hiole, Cheat system, Comedy, Conspiracy, Cooking, Cultivation, demons, Drama, Drama Seinen, Dungeon, Ecchi, excitement, Fantasy, fantasy، Martial arts, Fighting, Fusion, future era, Game, Gender Bender, Growth, Harem, Historical, Horror, hunters, Inspection, isekai, Josei, Joseon Dynasty, Kingdom Building, Magic, Manga, Manhua, Manhwa, Manhwa Hot, Martial Arts, Mature, Medical, Monster, Monsters, Murim, Mystery, One shot, Parenting, passionate, Player, Powered Armor, Psychological, Rebirth, Reborn, Revenge, Romance, School Life, Sci-fi, Seinen, Shoujo, Shounen, Slice of Life, Sports, Summons, Supernatural, superpower, Survival, System, Tamer, Taming, Thriller, Thrilling, time travel, Tragedy, Unknown, War, Weak-to-Strong, Webtoons, Xianxia, zombie
+
+### Статус
+All, Ongoing, Completed, Hiatus
+
+### Тип
+All, Manga, Manhwa, Manhua, Comic, Novel
+
+### Сортировка
+Default, A-Z, Z-A, Update, Added, Popular
 
 ## Структура файлов
 
@@ -24,15 +40,17 @@ ThunderScans - популярный источник манги с больши�
 thunderscans/
 ├── manifest.json      # Метаданные плагина
 ├── thunderscans.js    # Основной код плагина
+├── filters.json       # Конфигурация фильтров
+├── icon.png          # Иконка источника
 └── README.md         # Документация
 ```
 
 ## URL структура
 
-- **Базовый URL**: `https://en-thunderscans.com/`
-- **Популярная манга**: `https://en-thunderscans.com/comics/?order=popular`
-- **Последние обновления**: `https://en-thunderscans.com/comics/?order=update`
-- **Поиск**: `https://en-thunderscans.com/comics/`
+- **Базовый URL**: `https://thunderscans.com/`
+- **Популярная манга**: `https://thunderscans.com/series/?order=popular`
+- **Последние обновления**: `https://thunderscans.com/series/?order=update`
+- **Поиск**: `https://thunderscans.com/series/`
 
 ## Установка
 
@@ -44,6 +62,7 @@ thunderscans/
 
 - [x] Получение списка манги
 - [x] Поиск манги
+- [x] Система фильтров
 - [ ] Детали манги
 - [ ] Чтение глав
 - [ ] Загрузка изображений
