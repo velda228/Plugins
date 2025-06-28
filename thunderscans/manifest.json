@@ -1,0 +1,21 @@
+{
+  "id": "thunderscans",
+  "name": "ThunderScans",
+  "description": "ThunderScans - популярный источник манги с большим каталогом",
+  "version": "1.0.0",
+  "author": "velda228",
+  "repository": "https://github.com/velda228/Plugins",
+  "icon": "https://en-thunderscans.com/wp-content/uploads/2024/01/thunder-logo.png",
+  "isInstalled": false,
+  "canSearch": true,
+  "canBrowse": true,
+  "canRead": true,
+  "status": "available",
+  "languages": ["EN"],
+  "baseURL": "https://en-thunderscans.com/",
+  "websiteURL": "https://en-thunderscans.com/",
+  "downloadURL": "https://raw.githubusercontent.com/velda228/Plugins/main/thunderscans/thunderscans.js",
+  "popularUrl": "https://en-thunderscans.com/comics/?order=popular",
+  "latestUrl": "https://en-thunderscans.com/comics/?order=update",
+  "searchUrl": "https://en-thunderscans.com/comics/"
+} 
