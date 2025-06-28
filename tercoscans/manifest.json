@@ -7,7 +7,6 @@
   "repository": "https://github.com/velda228/Plugins",
   "icon": "https://i3.wp.com/tecnocomic.xyz/wp-content/uploads/2024/11/cropped-LOGO-6-1-192x192.png",
   "isInstalled": false,
-  "isWorking": false,
   "canSearch": true,
   "canBrowse": true,
   "canRead": true,
